@@ -6,7 +6,7 @@ import EditStudent from './StudentComponents/EditStudent';
 import { Staff } from "./Staff Components/Staff";
 import { AddStaff } from "./Staff Components/AddStaff";
 import Home from "./Home";
-import {EditStaff} from "./Staff Components/EditStaff";
+import EditStaff from "./Staff Components/EditStaff";
 
 
 

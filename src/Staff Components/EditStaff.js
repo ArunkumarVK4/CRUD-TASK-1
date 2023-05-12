@@ -4,7 +4,7 @@ import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min
 import {Button, TextField } from '@mui/material';
 import Base from '../Base/Base';
 
-export function EditStaff() {
+ function EditStaff() {
     const { staffs,setStaffs,staffsName,setStaffsName,staffsGender,setStaffsGender,staffSubject,setStaffSubject,staffQualification,setsStaffQualification } = AppPro();
 
     const { id } = useParams();
@@ -83,3 +83,5 @@ export function EditStaff() {
     </Base>
   )
 }
+
+export default EditStaff
