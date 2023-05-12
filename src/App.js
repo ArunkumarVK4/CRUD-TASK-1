@@ -22,14 +22,7 @@ function App() {
         <Route path="/editStudent/:id">
           <EditStudent />
         </Route>
-        {/* STAFF DASHBOARD */}
-        {/* <Route path="/staff-Dashboard">
-          <Staff />
-        </Route> */}
-
-        {/* <Route path="/addStaff/:id">
-          <AddStaff />
-        </Route> */}
+       
 
 
       </Switch>
