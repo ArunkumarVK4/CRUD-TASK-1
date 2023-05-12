@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import AppPro from '../UseContext/AppProvider'
+import { Button } from '@mui/material';
 
 function Base({children}) {
     const history = useHistory()
@@ -17,10 +18,11 @@ function Base({children}) {
 
   return (
     <div>
-      {/* DASHBOARD BUTTON */}
-        <button type="button" className="btn btn-primary m-5" onClick={()=>history.push("/")}>DASHBOARD</button>
+        {/* HOME BUTTON */}
+        <Button variant='contained'
+        style={{margin:"20px"}}
+        onClick={()=>history.push("/")}>HOME</Button>
 
-        <button type="button" className="btn btn-primary m-5" onClick={addStudent}>ADD STUDENTS</button>
 <div>
     {children}
 </div>

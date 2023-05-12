@@ -39,6 +39,9 @@ import AppPro from "../UseContext/AppProvider";
 <div>
 <h3 style={{marginBottom:"40px",color:"blue",backgroundColor:"white",width:"max-content",margin:"0 auto", marginBottom:"30px",padding:"8px",marginTop:"50px"}}>ADD STUDENT</h3>
     <Base>
+
+    
+    <button type="button" className="btn btn-primary m-5" onClick={addStudent}>ADD STUDENTS</button>
       <div>
         <div style={{display:"flex",flexDirection:"column", width:"60%",margin:"0 auto"}}> 
           

@@ -3,14 +3,23 @@ import "./App.css"
 import Student from './StudentComponents/Student';
 import AddStud from './StudentComponents/AddStud';
 import EditStudent from './StudentComponents/EditStudent';
+import { Staff } from "./Staff Components/Staff";
+import { AddStaff } from "./Staff Components/AddStaff";
+import Home from "./Home";
+import {EditStaff} from "./Staff Components/EditStaff";
+
 
 
 function App() {
   return (
     <div className="App">
      <Switch>
-        {/* Main page */}
+        {/* HONE page */}
         <Route exact path="/">
+          <Home/>
+        </Route>
+
+        <Route exact path="/student">
          <Student/>
 
         </Route>
@@ -23,14 +32,17 @@ function App() {
           <EditStudent />
         </Route>
         {/* STAFF DASHBOARD */}
-        {/* <Route path="/staff-Dashboard">
+        <Route path="/staffs">
           <Staff />
-        </Route> */}
+        </Route>
 
-        {/* <Route path="/addStaff/:id">
-          <AddStaff />
-        </Route> */}
+        <Route path="/addStaff">
+          <AddStaff/>
+        </Route>
 
+        <Route path="/edit/:id">
+          <EditStaff/>
+        </Route>
 
       </Switch>
     </div>

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import AppPro from "../UseContext/AppProvider";
 import Base from "../Base/Base";
+import { Button } from "@mui/material";
 
 function EditStudent() {
   const history = useHistory();
@@ -45,79 +46,97 @@ function EditStudent() {
     };
     students[id] = updatedStudent;
     setStudents([...students]);
-    history.push("/");
+    history.push("/student");
     console.log("object");
   }
   return (
     <Base>
       <div>
-        <h3 style={{marginBottom:"40px"}}>EDIT STUDENT</h3>
-        <div style={{display:"flex",flexDirection:"column", width:"60%",margin:"0 auto"}}> 
-        {/* Name Input */}
-        <input
+        <div style={{margin:"20px"}}>
+          <Button variant="contained" onClick={() => history.push("/student")}>
+            STUDENT DASHBOARD
+          </Button>
+
+          <Button variant="contained"
+          style={{marginLeft:"50px"}}
+          onClick={() => history.push("/addStudent")}>
+            ADD STUDENT
+          </Button>
+        </div>
+        <h3 style={{ margin: "40px" }}>EDIT STUDENT</h3>
+        <div
           style={{
-            marginBottom: "20px",
-            borderRadius: "10px",
-            height: "2rem",
-            padding: "5px",
+            display: "flex",
+            flexDirection: "column",
+            width: "60%",
+            margin: "0 auto",
           }}
-          type="text"
-          placeholder="Enter name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        {/* Gender Input */}
-        <input
-          style={{
-            marginBottom: "20px",
-            borderRadius: "10px",
-            height: "2rem",
-            padding: "5px",
-          }}
-          type="text"
-          placeholder="Enter Gender"
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
-        />
-        {/* Sub1 Input */}
-        <input
-          style={{
-            marginBottom: "20px",
-            borderRadius: "10px",
-            height: "2rem",
-            padding: "5px",
-          }}
-          type="number"
-          placeholder="Enter ENGLISH MARK"
-          value={sub1}
-          onChange={(e) => setSub1(e.target.value)}
-        />
-        {/* Sub2 Input */}
-        <input
-          style={{
-            marginBottom: "20px",
-            borderRadius: "10px",
-            height: "2rem",
-            padding: "5px",
-          }}
-          type="number"
-          placeholder="Enter MATHS MARK"
-          value={sub2}
-          onChange={(e) => setSub2(e.target.value)}
-        />
-        {/* Sub3 Input */}
-        <input
-          style={{
-            marginBottom: "20px",
-            borderRadius: "10px",
-            height: "2rem",
-            padding: "5px",
-          }}
-          type="number"
-          placeholder="Enter PHYSICS"
-          value={sub3}
-          onChange={(e) => setSub3(e.target.value)}
-        />{" "}
+        >
+          {/* Name Input */}
+          <input
+            style={{
+              marginBottom: "20px",
+              borderRadius: "10px",
+              height: "2rem",
+              padding: "5px",
+            }}
+            type="text"
+            placeholder="Enter name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          {/* Gender Input */}
+          <input
+            style={{
+              marginBottom: "20px",
+              borderRadius: "10px",
+              height: "2rem",
+              padding: "5px",
+            }}
+            type="text"
+            placeholder="Enter Gender"
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+          />
+          {/* Sub1 Input */}
+          <input
+            style={{
+              marginBottom: "20px",
+              borderRadius: "10px",
+              height: "2rem",
+              padding: "5px",
+            }}
+            type="number"
+            placeholder="Enter ENGLISH MARK"
+            value={sub1}
+            onChange={(e) => setSub1(e.target.value)}
+          />
+          {/* Sub2 Input */}
+          <input
+            style={{
+              marginBottom: "20px",
+              borderRadius: "10px",
+              height: "2rem",
+              padding: "5px",
+            }}
+            type="number"
+            placeholder="Enter MATHS MARK"
+            value={sub2}
+            onChange={(e) => setSub2(e.target.value)}
+          />
+          {/* Sub3 Input */}
+          <input
+            style={{
+              marginBottom: "20px",
+              borderRadius: "10px",
+              height: "2rem",
+              padding: "5px",
+            }}
+            type="number"
+            placeholder="Enter PHYSICS"
+            value={sub3}
+            onChange={(e) => setSub3(e.target.value)}
+          />{" "}
         </div>
         <br />
         <button type="button" className="btn btn-success" onClick={editStudent}>
