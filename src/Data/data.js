@@ -1,6 +1,6 @@
 const data = [  
    {  
-      name:'moorthy',
+      name:'Moorthy',
       gender:'Male',
       physics:89,
       maths:90,
@@ -8,14 +8,14 @@ const data = [
    },
    
    {  
-      name:'usha',
+      name:'Usha',
       gender:'Female',
       physics:67,
       maths:45,
       english:78
    },
    {  
-      name:'priya',
+      name:'Priya',
       gender:'Female',
       physics:56,
       maths:46,
